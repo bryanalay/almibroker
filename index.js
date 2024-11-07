@@ -4,7 +4,7 @@ import net from 'node:net'
 const broker = aedes()
 const server = net.createServer(broker.handle)
 
-server.listen(3000, '0.0.0.0', () => {
+server.listen(3000, () => {
   console.log('Running on 3000')
 })
 
