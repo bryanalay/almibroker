@@ -4,7 +4,7 @@ import http from 'node:http'
 const broker = aedes()
 const server = http.createServer(broker.handle)
 
-server.listen(1883, () => {
+server.listen(1883, '0.0.0.0', () => {
   console.log('Running on 1883')
 })
 
