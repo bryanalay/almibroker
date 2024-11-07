@@ -1,8 +1,8 @@
 import aedes from 'aedes'
-import net from 'node:net'
+import http from 'node:http'
 
 const broker = aedes()
-const server = net.createServer(broker.handle)
+const server = http.createServer(broker.handle)
 
 server.listen(1883, () => {
   console.log('Running on 1883')
