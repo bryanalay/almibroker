@@ -6,8 +6,8 @@ const server = http.createServer()
 
 server.on('request', broker.handle)
 
-server.listen(1883, '0.0.0.0', () => {
-  console.log('Running on 1883')
+server.listen(3000, '0.0.0.0', () => {
+  console.log('Running on 3000')
 })
 
 broker.on('client', (client) => {
